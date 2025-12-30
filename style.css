@@ -1,0 +1,22 @@
+img{
+    background-color: black;
+}
+body{
+    background-color: rgb(196, 196, 172);
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  border: 1px solid #333;
+  padding: 8px 12px;
+  text-align: center;
+}
+table caption{
+    font-size:larger
+
+}
+html{
+    font-family: 'Times New Roman', Times, serif;
+}
