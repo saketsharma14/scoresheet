@@ -1,22 +1,223 @@
-img{
-    background-color: black;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-body{
-    background-color: rgb(196, 196, 172);
-}
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-th, td {
-  border: 1px solid #333;
-  padding: 8px 12px;
-  text-align: center;
-}
-table caption{
-    font-size:larger
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    min-height: 100vh;
+    padding: 20px;
 }
-html{
-    font-family: 'Times New Roman', Times, serif;
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: white;
+    padding: 30px 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header img {
+    height: 80px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.header-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.header-text p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+.content {
+    padding: 40px;
+}
+
+.info-box {
+    background: #f8f9fa;
+    border-left: 4px solid #c9a961;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+.info-box p {
+    margin-bottom: 10px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.info-box a {
+    color: #c9a961;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.info-box a:hover {
+    color: #a68a4d;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+caption {
+    font-size: 1.8em;
+    font-weight: 700;
+    padding: 20px;
+    background: linear-gradient(135deg, #c9a961 0%, #d4b976 100%);
+    color: white;
+    text-align: left;
+}
+
+thead {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: white;
+}
+
+th {
+    padding: 18px 12px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+tbody tr {
+    transition: all 0.3s ease;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tbody tr:hover {
+    background-color: #e7f1ff;
+    transform: scale(1.01);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+td {
+    padding: 16px 12px;
+    text-align: center;
+    border-bottom: 1px solid #e9ecef;
+    color: #333;
+}
+
+td:first-child {
+    font-weight: 600;
+    text-align: left;
+    color: #2d2d2d;
+}
+
+td:last-child {
+    font-weight: 700;
+    color: #c9a961;
+    font-size: 1.1em;
+}
+
+/* Countdown Overlay Styles */
+.countdown-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.countdown-overlay.hidden {
+    display: none;
+}
+
+.countdown-content {
+    text-align: center;
+    color: white;
+}
+
+.countdown-content h2 {
+    font-size: 3em;
+    margin-bottom: 30px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.countdown-timer {
+    font-size: 5em;
+    font-weight: 700;
+    color: #c9a961;
+    text-shadow: 0 0 30px rgba(201, 169, 97, 0.5);
+    margin-bottom: 20px;
+}
+
+.countdown-labels {
+    font-size: 1.2em;
+    color: #aaa;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-text h1 {
+        font-size: 1.8em;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    th,
+    td {
+        padding: 10px 6px;
+        font-size: 0.85em;
+    }
+
+    .countdown-content h2 {
+        font-size: 2em;
+    }
+
+    .countdown-timer {
+        font-size: 3em;
+    }
+
+    .countdown-labels {
+        font-size: 1em;
+    }
 }
