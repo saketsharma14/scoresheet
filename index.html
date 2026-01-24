@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz League Scoresheet</title>
+    <title>Quizzing Club IITDAD</title>
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js"></script>
 </head>
@@ -13,8 +13,7 @@
     <!-- Countdown Overlay -->
     <div class="countdown-overlay" id="countdownOverlay">
         <div class="countdown-content">
-            <img src="./Screenshot_2025-12-30_at_6.59.45_PM-removebg-preview.png" alt="IITD Logo"
-                style="height: 100px; background: #333; padding: 15px; border-radius: 15px; margin-bottom: 20px;">
+            <img src="./Screenshot_2025-12-30_at_6.59.45_PM-removebg-preview.png" alt="IITD Logo">
             <h2>REVEALING IN</h2>
             <div class="countdown-timer" id="countdownTimer">
                 <div id="timerDisplay">--:--:--:--</div>
@@ -25,20 +24,50 @@
         </div>
     </div>
 
+    <!-- Popup Overlay -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-content">
+            <button class="popup-close" id="popupClose">&times;</button>
+            <img src="./pop_culture.jpg" alt="Pop Culture Quiz" class="popup-image">
+        </div>
+    </div>
+
     <div class="container">
         <div class="header">
             <img src="./Screenshot_2025-12-30_at_6.59.45_PM-removebg-preview.png" alt="IITD Logo">
             <div class="header-text">
-                <h1>Quiz League</h1>
+                <h1>Announcing the Quiz League</h1>
                 <p>Team-Based Competition | Individual Scores</p>
             </div>
         </div>
 
         <div class="content">
             <div class="info-box">
-                <p><strong>📊 Scoring System:</strong> The scoresheet is maintained individually even though the quizzes
-                    will be team based.</p>
-                <p><strong>📖 Learn More:</strong> For detailed description, check the <a
+                <h3>🏆 What is the Quiz League?</h3>
+                <p>The Quiz League is a season-long competition consisting of multiple quizzes across diverse domains.
+                    While quizzes are played in teams, points are tracked individually, and consistent participation is
+                    rewarded.</p>
+
+                <h3>📋 How it Works</h3>
+                <ol>
+                    <li>Multiple quizzes are conducted over the league period</li>
+                    <li>Each quiz focuses on one or more domains</li>
+                    <li>Quizzes are team-based, but scores are awarded individually</li>
+                    <li>Individual scores accumulate across quizzes</li>
+                    <li>Final standings decide league rankings and awards</li>
+                </ol>
+
+                <h3>🎯 Quiz Domains</h3>
+                <div class="domains-grid">
+                    <span class="domain-badge">Pop Culture</span>
+                    <span class="domain-badge">History</span>
+                    <span class="domain-badge">Sports</span>
+                    <span class="domain-badge">Science & Tech</span>
+                    <span class="domain-badge">Anime/Heroes/Gaming</span>
+                    <span class="domain-badge">General Knowledge</span>
+                </div>
+
+                <p style="margin-top: 20px;"><strong>📖 Learn More:</strong> For detailed description, check the <a
                         href="https://drive.google.com/file/d/1dKQrrZKaGrw9yqKXueCpxNkrPBkRkZj4/view?usp=sharing"
                         target="_blank">Rulebook →</a></p>
             </div>

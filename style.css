@@ -31,7 +31,7 @@ body {
 
 .header img {
     height: 80px;
-    background: white;
+    background: transparent;
     padding: 10px;
     border-radius: 10px;
 }
@@ -54,15 +54,54 @@ body {
 .info-box {
     background: #f8f9fa;
     border-left: 4px solid #c9a961;
-    padding: 20px;
+    padding: 30px;
     margin-bottom: 30px;
     border-radius: 8px;
+}
+
+.info-box h3 {
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    margin-top: 25px;
+}
+
+.info-box h3:first-child {
+    margin-top: 0;
 }
 
 .info-box p {
     margin-bottom: 10px;
     color: #333;
     line-height: 1.6;
+}
+
+.info-box ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    color: #333;
+    line-height: 1.8;
+}
+
+.info-box ol li {
+    margin-bottom: 8px;
+}
+
+.domains-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.domain-badge {
+    background: linear-gradient(135deg, #c9a961 0%, #d4b976 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9em;
+    display: inline-block;
 }
 
 .info-box a {
@@ -168,6 +207,14 @@ td:last-child {
     color: white;
 }
 
+.countdown-content img {
+    height: 100px;
+    background: transparent;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
 .countdown-content h2 {
     font-size: 3em;
     margin-bottom: 30px;
@@ -187,6 +234,85 @@ td:last-child {
     font-size: 1.2em;
     color: #aaa;
     letter-spacing: 1px;
+}
+
+/* Popup Overlay Styles */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    animation: fadeIn 0.3s ease;
+}
+
+.popup-overlay.show {
+    display: flex;
+}
+
+.popup-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    animation: slideUp 0.4s ease;
+}
+
+.popup-image {
+    max-width: 100%;
+    max-height: 90vh;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.popup-close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: #c9a961;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.popup-close:hover {
+    background: #a68a4d;
+    transform: rotate(90deg);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 @media (max-width: 768px) {
@@ -219,5 +345,17 @@ td:last-child {
 
     .countdown-labels {
         font-size: 1em;
+    }
+
+    .popup-content {
+        max-width: 95%;
+    }
+
+    .popup-close {
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+        top: -10px;
+        right: -10px;
     }
 }
